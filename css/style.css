@@ -1,0 +1,332 @@
+/* =====================================================================
+   Color palette
+Background: #8F250C + #691E06 (gradient)
+Surface: #BB4D00
+Primary: #CA5310
+Accent: #FBBA72
+Text: #691E06
+
+   ===================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  color: #000000;
+  background: linear-gradient(90deg, #8F250C, #691E06); /* Background with a gradient effect CHANGED */
+  line-height: 1.6; /* text lines are spaced out vertically for better readability */
+  padding: 12px; /* prevents elements from touching the edges of the web page */
+  text-align: center; /* centers all text content */
+  
+  
+}
+
+h1, h2 { font-family: "DM Sans", Georgia, serif; line-height: 1.1; color: #BB4D00; } /*CHANGED*/
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); } /* sets the minimum and maximum size of text, depending on screen size */
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); color: #CA5310; } /* sets the minimum and maximum size of text, depending on screen size CHANGED */
+p  { font-size: clamp(1.1rem, 1.25vw, 1.4rem); max-width: 65ch;} /* sets the minimum and maximum size of text, depending on screen size */
+img { max-width: 100%; height: auto; display: block; text-align: center; border-radius: 12px;}
+svg {
+  width: 100%;                      
+  max-width: 250px;   /* sets max horizontal width on the SVG icons */     
+  max-height: 200px;  /* sets max vertical height on the SVG icons */       
+
+}
+
+a:hover{
+  transition: all 0.1s ease-in-out; /*Gradually changes color when hovered over*/
+   background-color: #BB4D00; 
+
+
+}
+
+.hero { 
+  display: inline-block;
+  color: #000000;
+  min-height: 80dvh;
+  
+}
+
+.heroabout { 
+  display: inline-block;
+  color: #000000;
+  min-height: 16dvh;
+}
+
+
+
+.herovideo {
+  display: block;
+    margin: 20px auto; /* adds spacing between other elements of the page */
+    width: clamp(38vw, 48vw, 60vw);
+    
+}
+
+.tagline{
+  display: flex;
+  margin: auto;
+  justify-content: center; /* text is centered alongside auto margin */
+
+}
+   
+.description {
+  display: inline-block;
+ padding-bottom: 32px; 
+
+}
+
+.footer {
+  display: flex; 
+  justify-content: space-between; /* Sets the name to the left and the nav links/hamburger menu to the right */
+  align-items: center; /* content is centered vertically */
+  max-width: 1400px; /* sets the maximum width of the header bar */
+  margin: 0 auto; /* element is centered horizontally, and sets vertical margin to zero */
+  padding: 24px 16px; /* first number sets the thickness of the element. second number pushes content away from the screen edges */
+   background: linear-gradient(90deg, #8F250C, #691E06); /* Background with a gradient effect */
+   border-radius: 12px; /* Gives the element a rounded shape */
+   outline-style: solid;
+   outline-color: #BB4D00;
+   box-shadow: 0 10px 20px #691E06; /* adds a shadow behind the element, giving it more contrast */
+}
+
+.brand{
+  color: #000000;
+  text-decoration: none;
+}
+
+.brand a:hover{
+border-radius: 12px;
+    padding: 6px;
+}
+
+
+li a{
+  color: #FBBA72;
+  text-decoration: none;
+}
+
+
+li a:hover {
+    border-radius: 12px;
+    padding: 6px;
+}
+
+
+
+.btn-primary {
+  display: inline-block;
+  background-color: #FBBA72;
+  color: #691E06;
+  padding: 12px 24px;
+  margin: 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 20px #691E06;
+  cursor: pointer;
+  outline-style: solid;
+   outline-color: #BB4D00;
+   
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: #CA5310;
+  color: #691E06;
+  padding: 12px 24px;
+  margin: 48px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 20px #691E06;
+  cursor: pointer;
+  outline-style: solid;
+   outline-color: #FBBA72;
+}
+
+/* ---- HEADER (all pages) ---- */
+.header-inner {
+  display: flex; 
+  outline-style: solid;
+   outline-color: #BB4D00;
+  justify-content: space-between; /* Sets the name to the left and the nav links/hamburger menu to the right */
+  align-items: center; /* content is centered vertically */
+  max-width: 1400px; /* sets the maximum width of the header bar */
+  margin: 0 auto; /* element is centered horizontally, and sets vertical margin to zero */
+  padding: 14px 24px; /* first number sets the thickness of the element. second number pushes content away from the screen edges */
+   background: linear-gradient(90deg, #8F250C, #691E06); /* Background with a gradient effect */
+   border-radius: 12px; /* Gives the element a rounded shape */
+   box-shadow: 0 10px 20px #691E06; /* adds a shadow behind the element, giving it more contrast */
+}
+
+
+
+.navlinks{
+  display: flex;
+  outline-style: solid;
+   outline-color: #BB4D00;
+  flex-direction: row; /* elements are placed horizontally from mone another */
+  gap: 20px; /* Creates space between the individual elements */
+  background: linear-gradient(90deg, #691E06, #8F250C); /* Background with a gradient effect */
+  border-radius: 12px; /* Gives the element a rounded shape */
+  padding: 8px; /* sets the thickness of the element */
+  list-style: none; /* removes the list style of li, such as bullet points */
+  box-shadow: 0 10px 20px #691E06; /* adds a shadow behind the element, giving it more contrast */
+}
+
+
+/* ---- SKILLS (auto-fit Grid) ---- */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* automatically sets columns depending on screen size, sets the minimum width on individual column, and stretches it to fill each end of the web page*/
+  gap: 24px; /* Creates space between the individual elements */
+  max-width: 1400px;
+  margin-inline: auto;
+   
+}
+
+.cards-item{
+ padding: 24px; /* sets the thickness of the element */
+  background: #FBBA72; /* Background with a gradient effect */
+  border-radius: 12px; /* Gives the element a rounded shape */
+  outline-style: solid;
+   outline-color: #BB4D00;
+  box-shadow: 0 10px 20px #691E06; /* adds a shadow behind the element, giving it more contrast */
+  
+}
+
+.cards-item:hover {
+  transition: all 0.3s ease-in-out; /*Gradually changes color and position when hovered over*/
+  transform: translateY(-8px); /* cards are moved up when hovered on */
+   background-color: #BB4D00; 
+}
+
+.story-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* automatically sets columns depending on screen size, sets the minimum width on individual column, and stretches it to fill each end of the web page*/
+  gap: 12px; /* Creates space between the individual elements */
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-bottom: 48px;
+}
+
+.story-cards-item{
+ padding: 24px; /* sets the thickness of the element */
+  background: #FBBA72; /* Background with a gradient effect */
+  border-radius: 12px; /* Gives the element a rounded shape */
+  outline-style: solid;
+   outline-color: #BB4D00;
+  box-shadow: 0 10px 20px #691E06; /* adds a shadow behind the element, giving it more contrast */
+  
+}
+
+.story-cards-image{
+ display: block;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.story-cards-item:hover {
+  transition: all 0.3s ease-in-out; /*Gradually changes color and position when hovered over*/
+  transform: translateY(-4px); /* cards are moved up when hovered on */
+   box-shadow: 0 10px 20px #FBBA72;
+}
+
+.card-avatar {
+  width: 140px;        
+  height: 140px;
+  border-radius: 50%; /* gives image a circular shape */
+  display: block;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 10px 20px #691E06; /* adds a shadow behind the element, giving it more contrast */
+}
+
+.fun-fact {
+  display: grid;
+  margin: 48px auto;
+  padding: 8px;
+  color: #FBBA72;
+  border-left: 8px solid #FBBA72; /* adds a border to the left of the screen, making the section stand out from the rest */
+   max-width: 1400px;
+  font-size: clamp(1.1rem, 1.25vw, 1.4rem);
+  place-items: center; /* centers the svg icon */
+}
+
+
+
+/* ---- FOCUS-VISIBLE for accessibility ---- */
+:focus-visible {
+  outline: 3px solid #FBBA72;
+  outline-offset: 3px;
+}
+
+/* ---- MOBILE NAV ---- */
+.menu-toggle {
+  display: none; /* the hamburger menu is not displayed on larger screen sizes*/
+  flex-direction: column; /* the individual bars for the hamburger menu are stacked vertically */
+  cursor: pointer; /* the mouse becomes the pointer icon when hovering over the hamburger menu */
+  justify-content: space-between; /* aligns the individual bars evenly */
+  width: 30px; /* sets the width of the indivudual bars */
+  height: 21px; /* sets the width of the space between the indivudual bars */
+  background: transparent; /* the "button" becomes invisible, leaving only the three bars */
+  border: none;  /* the border around the "button" becomes invisible */
+  padding: 0; /* removes all internal spacing within the element */
+}
+
+
+.bar{ /* creates the design for the individual bars for the hamburger menu using three spans*/
+  height: 4px;
+  background-color: #FBBA72;
+  border-radius: 2px;
+}
+
+
+
+@media (max-width: 767px) { /* for smaller displays */
+
+  .menu-toggle { 
+  display: flex; /* The hamburger menu icon is made visible */
+  }
+
+
+.navlinks{
+  flex-direction: column; /* elements are placed vertically from mone another */
+}
+
+.cards-grid{
+  grid-template-columns: repeat(1, 1fr); /* creates a single column that stretches across the web page*/
+}
+
+
+.story-cards-grid{
+  grid-template-columns: repeat(1, 1fr); /* creates a single column that stretches across the web page*/
+}
+
+.hero {
+  min-height: 40dvh; /* shortens hero height to prevent too much empty space*/
+}
+
+
+  #primary-nav {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: 300px; max-width: 85vw; /* gives enough space for the nav links to be displayed properly */
+    background: #691f06be;
+    transform: translateX(100%); /* hamburger menu is hidden by default */
+    transition: transform 0.28s ease; /* animation when opening the hamburger menu */
+    flex-direction: column; /* elements are placed vertically from mone another */
+    padding: 80px 24px; /* first number sets the thickness of the element. second number pushes content away from the screen edges */
+  }
+  body.menu-open #primary-nav { transform: translateX(0); }
+}
+
+
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
